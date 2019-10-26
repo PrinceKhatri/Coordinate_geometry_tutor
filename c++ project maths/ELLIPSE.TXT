@@ -1,0 +1,9 @@
+center(c) also known as the center of the ellipse
+where both major and minor axis bisect.
+Foci s & s' are two foci of the ellipse.
+the coordinates of foci are (ae,0)&(-ae,0).
+Directrices ZM & Z'M'are the two directrix.
+Axis the lines AA' & BB' are the major and minor axis of the elipse.
+latus rectum LL' & PP' are the latus rectum.
+Focal chord a chord of the ellipse passing through its focus is called focal chord.
+Vertices the vertics of the ellipse are the where the ellipse meets its major axis.

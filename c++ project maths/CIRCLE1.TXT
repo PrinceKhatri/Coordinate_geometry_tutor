@@ -1,0 +1,6 @@
+circles:-.
+defination:-the set of all points in a plane each of which is at
+a constant distance from a fixed point in the plane is called a circle.
+formulas:-.
+1:-to find the area3.14*radius*radius.
+2:-to find circumference2*3.14*radius.

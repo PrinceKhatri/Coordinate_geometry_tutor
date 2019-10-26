@@ -1,0 +1,365 @@
+//#include<constream.h>
+#include<math.h>
+#include<graphics.h>
+//#include<fstream.h>
+#include<process.h>
+
+int y;
+class conic
+{
+public:
+void secpg();
+void conics();
+void frontpg();
+void circcle();
+void parabola();
+void hyperbola();
+void equations_parabola();
+void ellipsse();
+void equations_ellipse();
+void equations_hyperbola();
+void related_ellipse();
+void related_hyperbola();
+};
+ void conic::secpg()
+ {
+ int gd=DETECT,gm;
+ initgraph(&gd,&gm,"c:\\turboc3\\bgi.");
+ setbkcolor(YELLOW);
+ setcolor(BLUE);
+ settextstyle(4,0,5);
+ outtextxy(50,30,"\t\tEnter your choice:");
+ settextstyle(4,0,3);
+ outtextxy(50,90,"1:-To know about conics");
+ outtextxy(50,110,"2:-To know about circles");
+ outtextxy(50,130,"3:-To know about parabola");
+ outtextxy(50,150,"4:-To know about elipse");
+ outtextxy(50,170,"5:-To know about hyperbola");
+ outtextxy(50,190,"6:-To exit the program");
+ cin>>::y;
+ closegraph();
+}
+void conic::frontpg()//function of front page
+{
+char x[5];
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:\\turboc3\\bgi.");
+setbkcolor(0);
+setcolor(12);
+settextstyle(7,0,7);
+outtextxy(40,100,"welcome to conics");
+settextstyle(4,0,4);
+outtextxy(100,200,"subtopics:-");
+outtextxy(100,250,"circle, parabola, elipse & hyperbola");
+setcolor(12);
+settextstyle(1,0,3);
+outtextxy(100,300,"enter ''go''to proceede to next page");
+cin>>x;
+closegraph();
+secpg();
+}
+void conic::conics()
+{
+char a[20];
+
+
+cout<<"introduction::-";
+fstream fin;
+char ch[80];
+fin.open("conics.txt",ios::in);
+while(!fin.eof())
+{
+fin.getline(ch,80,'.');
+cout<<ch;
+getch();
+}
+fin.close();
+int gd=DETECT,gm;
+int midx=170;
+int midy=200;
+int stangle=0;
+int endangle=360;
+int xradius=30;
+int yradius=20;
+initgraph(&gd,&gm,"c:\\turboc3\\bgi.");
+ellipse(midx,midy,stangle,endangle,xradius,yradius);
+ellipse(midx,midy+200,stangle,endangle,xradius,yradius);
+line(200,200,140,400);
+line(140,200,200,400);
+line(midx,midy-50,midx,midy+250);
+outtextxy(190,230,"upper nappe");
+outtextxy(midx,midy-50,"axis");
+outtextxy(180,300,"v(vertex)");
+outtextxy(190,350,"lower nappe");
+outtextxy(350,400,"enter go to proceede to circles");
+cin>>a;
+closegraph();
+}
+void conic::circcle()
+{
+char b[5];
+int n;
+int gd=DETECT,gm;
+int x=170;
+int y=300;
+int radius=70,xradius=40,yradius=20;
+int stangle=0,endangle=360;
+initgraph(&gd,&gm,"c:/turboc3/bgi");
+cout<<"enter your class";
+cin>>n;
+if(n>=1&&n<=10)
+{
+fstream fin;
+fin.open("circle1.txt",ios::in);
+while(!fin.eof())
+{
+char ch[80];
+fin.getline(ch,80,'.');
+cout<<ch;
+getch();
+}
+fin.close();
+circle (x,y,radius);
+line (x,y,x+70,y);
+outtextxy(x,y-10,"radius");
+outtextxy(x+75,y,"circle");
+outtextxy(350,400,"enter exit to exit");
+cin>>b;
+}
+else if(n>10)
+{
+fstream fin;
+fin.open("circles2.txt",ios::in);
+while(!fin.eof())
+{
+char ch[80];
+fin.getline(ch,80,'.');
+cout<<ch;
+getch();
+}
+fin.close();
+circle (x,y+10,radius);
+ellipse (x+380,y,stangle,endangle,xradius,yradius);
+line (x+420,y,x+380,y-200);
+line (x+340,y,x+380,y-200);
+circle (x+380,y-90,xradius-20);
+line (x,y+10,x+70,y+10);
+line (x+340,y-150,x+430,y-150);
+line (x+340,y-50,x+430,y-50);
+line (x+340,y-150,x+340,y-50);
+line (x+430,y-150,x+430,y-50);
+outtextxy(x,y,"radius");
+outtextxy(x+75,y+10,"circle");
+outtextxy(350,400,"enter go to proceede to circles");
+cin>>b;
+closegraph();
+}
+}
+void conic::equations_hyperbola()
+{
+char x[5];
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:/turboc3/bgi");
+outtextxy(0,0,"(x^2)/a^2-(y^2)/b^2=1");
+line (200,50,430,50);
+line (300,10,300,100);
+arc (250,50,270,90,30);
+arc (350,50,90,270,30);
+outtextxy(430,50,"x");
+outtextxy(300,0,"y");
+line (0,110,3000,110);
+outtextxy(0,120,"-(x^2)/a^2+(y^2)/b^2=1");
+line (250,200,350,200);
+line (300,125,300,270);
+arc (300,150,180,360,30);
+arc (300,250,360,180,30);
+outtextxy(300,125,"y");
+outtextxy(350,200,"x");
+outtextxy(0,300,"enter exit to exit");
+cin>>x;
+closegraph();
+}
+void conic::related_hyperbola()
+{
+clrscr();
+char x[5];
+fstream fin;
+fin.open("hyp.txt",ios::in);
+while(!fin.eof())
+{
+char ch[80];
+fin.getline(ch,80,'.');
+cout<<ch;
+getch();
+}
+fin.close();
+cout<<"enter go to proceede to equations"<<endl;
+cin>>x;
+equations_hyperbola();
+}
+void conic::hyperbola()
+{
+char x[5];
+cout<<"!!!!definations:-!!!!"<<endl<<endl<<endl;
+cout<<"the locus of a pt which moves in a plane such that its distance from a fixed point(i.e.,focus) is e times its distance from a fixed line(i.e.,directrex)is known hyperbola"<<endl;
+cout<<"!!!!eccentricity(e)>1!!!!"<<endl;
+cout<<"enter go to proccede to related pts"<<endl;
+cin>>x;
+related_hyperbola();
+}
+void conic::equations_ellipse()
+{
+char x[5];
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:/turboc3/bgi");
+outtextxy(0,0,"(x^2/a^2)+(y^2/b^2)=1,a>b");
+ellipse (100,200,0,360,50,25);
+line (0,200,200,200);
+line (100,100,100,300);
+outtextxy(100,200,"C");
+outtextxy(300,0,"(x^2/a^2)+(y^2/b^2)=1,a<b");
+ellipse (500,200,0,360,50,25);
+line (400,200,600,200);
+line (500,100,500,300);
+outtextxy(500,200,"C");
+line (250,0,250,500);
+outtextxy(0,800,"enter go to proceede to hyperbola");
+cin>>x;
+closegraph();
+}
+void conic::equations_parabola()
+{
+char y[5];
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:/turboc3/bgi");
+outtextxy(0,50,"y^2=4ax");
+line (150,0,150,100);
+line (80,50,250,50);
+arc (200,50,90,270,50);
+outtextxy(0,160,"y^2=-4ax");
+line (150,110,150,210);
+line (80,160,250,160);
+arc (100,160,270,90,50);
+outtextxy(0,270,"x^2=4ay");
+line (150,220,150,320);
+line (80,270,250,270);
+arc (150,220,180,360,50);
+outtextxy(0,380,"x^2=-4ay");
+line (150,330,150,430);
+line (80,380,250,380);
+arc (150,430,360,180,50);
+outtextxy(250,380,"enter go to proceede to ellipse");
+cin>>y;
+closegraph();
+}
+void conic::related_ellipse()
+{
+char a[5];
+int x=200,y=250;
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:/turboc3/bgi");
+fstream fin;
+fin.open("ellipse.txt",ios::in);
+while(!fin.eof())
+{
+char ch[80];
+fin.getline(ch,80,'.');
+cout<<ch;
+getch();
+}
+fin.close();
+ellipse (x+50,y+80,0,360,50,25);
+line (x-50,y+80,x+150,y+80);
+line (x+50,y,x+50,y+170);
+line (x-30,y,x-30,y+170);
+line (x+140,y,x+140,y+170);
+outtextxy(x+140,y+80,"Z'");
+outtextxy(x+140,y+40,"M'");
+outtextxy(x-30,y+80,"Z");
+outtextxy(x-30,y+40,"M");
+outtextxy(x+95,y+80,"A'");
+outtextxy(x,y+80,"A");
+outtextxy(x+50,y+80,"C");
+outtextxy(x+20,y+80,"S");
+outtextxy(x+75,y+81,"S'");
+line (x+20,y+60,x+20,y+100);
+outtextxy(x+20,y+55,"L");
+outtextxy(x+20,y+102,"L'");
+outtextxy(x+75,y+55,"P");
+outtextxy(x+75,y+101,"P'");
+line (x+75,y+60,x+75,y+100);
+line (x-30,y+40,x+140,y+40);
+outtextxy(0,800,"enter go to proceede to equations of ellipse");
+cin>>a;
+equations_ellipse();
+}
+void conic::ellipsse()
+{
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:/turboc3/bgi");
+char p[5];
+cout<<"definations:-";
+cout<<"an ellipse is the locus of a pt whitch moves in a plane"<<endl;
+cout<<"such that its distance from a fixed pt is a constant ratio"<<endl;
+cout<<"from a fixed line."<<endl<<endl<<endl;
+cout<<"enter go to proceede to realted points on ellipse";
+cin>>p;
+
+related_ellipse();
+}
+void conic::parabola()
+{
+char cs[5];
+int z;
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:/turboc3/bgi");
+int x=200,y=250,xradius=45,yradius=24;
+int stangle=270,endangle=500,radius=31;
+fstream fin;
+fin.open("ellipse.txt",ios::in);
+while(!fin.eof())
+{
+char ch[80];
+fin.getline(ch,80,'.');
+cout<<ch;
+getch();
+}
+fin.close();
+ellipse (x,y+200,0,360,xradius,yradius);
+line (x+45,y+200,x,y-90);
+line (x-45,y+200,x,y-90);
+line (x,y+200,x,y-90);
+arc (x+10,y+190,stangle,endangle,radius);
+line (x+20,y-80,x-80,y+225);
+line (x+130,y-80,x+50,y+225);
+line (x+20,y-80,x+130,y-80);
+line (x-80,y+225,x+50,y+225);
+outtextxy(x+100,y+200,"enter go to proceede to next equations");
+cin>>cs;
+closegraph();
+equations_parabola();
+}
+conic c;
+
+void main()
+{
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+c.frontpg();
+switch(::y)
+{
+case 1:
+c.conics();
+case 2:
+c.circcle();
+case 3:
+c.parabola();
+case 4:
+c.ellipsse();
+case 5:
+c.hyperbola();
+case 6:
+exit(0);
+}
+getch();
+}

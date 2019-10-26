@@ -1,0 +1,7 @@
+center=all chords passing through cand bisected at c
+foci & directrix=s & s'are the foci of the ellipse and their coordinates are (ae,0) and (-ae,0) respectively and zm & z'm' are two directrex of the hyperbola and thier equations are x=a/e and x=-a/e respectively
+axes= the point A(a,0) and A'(-a,0) are called the vertices of the hyperbola and line AA' is called transverse axis and the line perpendicular to it through the centre (0,0) of the hyperbola is called conjugate axis.
+the length of transverse and conjugate axis are taken as 2a and 2b respectively.
+Double ordinate= If Q be a pt on hyperbola draw QN perpendicular to axis of the hyperbola and produced to meet the curve again at Q'.then QQ' is called the Double ordinate of Q.
+latus-rectum=the Double ordinate LL' and ll' are the latus rectum of the hyperbola.
+focal chord=a chord of the hyperbola passing through its focus is called a focal chord

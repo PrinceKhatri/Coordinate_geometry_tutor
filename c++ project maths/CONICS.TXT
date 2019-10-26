@@ -1,0 +1,5 @@
+Apollonius realised that a conic section is a curve of intersection of a right
+circular cone of two nappes and a plane.
+The curves so obtained are called straight line,circle,elipse,parabola &
+hyperbola.
+In This program further we will see the equations,diagrams etc.

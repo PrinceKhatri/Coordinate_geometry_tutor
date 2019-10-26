@@ -1,0 +1,7 @@
+defination:-
+section of a right circular cone by a which is parallel to a generator of yhe cone is a parabola
+!!important terms!!
+axis=the st line passing through focus and perpendicular to the directex is called the axis
+vertex=the pt of intesection of the conic section and the axis is called vertex
+focal chord=any chord passing through the focus is called focal chord
+Double ordinate=a stline drawn perpendicular to the axis and terminated at both end of the curve is a Double ordinate latus rectum=the Double ordinate passing through the focus is called latus rectum"<<endl;
